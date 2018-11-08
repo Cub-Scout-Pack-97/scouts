@@ -1,0 +1,46 @@
+version: "2"
+services:
+  mongo:
+    image: mongo
+    volumes:
+      - ~/mongo-data:/data/db
+    expose:
+      - 27017
+    networks:
+      vpcbr:
+        ipv4_address: 10.5.0.6
+  email:
+    build: ./Pack97Mail
+    ports:
+      - "7777:7777"
+    networks:
+      vpcbr:
+        ipv4_address: 10.5.0.9
+  backend:
+    build: ./Pack97NodeJSBE
+    ports:
+      - "4477:4477"
+    links: 
+      - mongo
+    depends_on:
+    - mongo
+    networks:
+      vpcbr:
+        ipv4_address: 10.5.0.7
+  frontend:
+    build: ./Pack97NodeJSFE
+    ports:
+      - "80:3003"
+    links:
+      - backend
+      - email
+    networks:
+      vpcbr:
+        ipv4_address: 10.5.0.8
+networks:
+  vpcbr:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.5.0.0/16
+          gateway: 10.5.0.1

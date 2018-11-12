@@ -13,7 +13,7 @@ RUN apk add git
 RUN git clone https://github.com/Cub-Scout-Pack-97/pack97Mail.git
 
 ## Create Working Dir
-WORKDIR /Pack97Mail
+WORKDIR /Pack97NodeMail
 
 ## Delete GIT
 RUN apk del git

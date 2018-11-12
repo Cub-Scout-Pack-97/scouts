@@ -88,12 +88,12 @@ This repo will let you build and run the development version of the Docker conta
       
       a. Clone the Front End repo to your local drive.
       ```
-      git clone https://github.com/Cub-Scout-Pack-97/Pack97NodeMail.git
+      git clone https://github.com/Cub-Scout-Pack-97/Pack97Mail.git
       ```
       
-      b. Open the Pack97NodeMail folder.
+      b. Open the Pack97Mail folder.
       ```
-      cd Pack97NodeMail
+      cd Pack97Mail
       ```
       
       c. Checkout the develop branch.

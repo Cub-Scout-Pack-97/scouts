@@ -38,7 +38,7 @@ This repo will let you build and run the development version of the Docker conta
 
 2. Install the latest version of NodeJS. Go to the [NodeJS site](https://nodejs.org/en/) and follow their steps
 
-3. From your terminal do the following:
+3. From in side the scouts folder in your terminal do the following:
 
     ### Front End
       

@@ -10,13 +10,10 @@ RUN apk upgrade --update
 RUN apk add git
 
 ## Move to dev folder
-RUN git clone https://github.com/Cub-Scout-Pack-97/Pack97NodeJSFE.git
+RUN git clone https://github.com/Cub-Scout-Pack-97/pack97Mail.git
 
 ## Create Working Dir
-WORKDIR /Pack97NodeJSFE
-
-## Checkout develop branch
-RUN git checkout develop
+WORKDIR /Pack97NMail
 
 ## Delete GIT
 RUN apk del git
@@ -27,6 +24,6 @@ RUN npm install
 ## Install Nodemon (dev) 
 RUN npm install -g nodemon
 
-EXPOSE 3003
+EXPOSE 7777
 
-CMD [ "nodemon", "server.js" ]
+CMD [ "nodemon", "index.js" ]

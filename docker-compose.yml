@@ -10,14 +10,14 @@ services:
       vpcbr:
         ipv4_address: 10.5.0.6
   email:
-    build: ./Pack97Mail
+    build: ./Mail
     ports:
       - "7777:7777"
     networks:
       vpcbr:
         ipv4_address: 10.5.0.9
   backend:
-    build: ./Pack97NodeJSBE
+    build: ./BackEnd
     ports:
       - "4477:4477"
     links: 
@@ -28,7 +28,7 @@ services:
       vpcbr:
         ipv4_address: 10.5.0.7
   frontend:
-    build: ./Pack97NodeJSFE
+    build: ./FrontEnd
     ports:
       - "80:3003"
     links:

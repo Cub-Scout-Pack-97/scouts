@@ -10,7 +10,7 @@ RUN apk upgrade --update
 RUN apk add git
 
 ## Move to dev folder
-RUN git clone https://github.com/johnkelley4477/Pack97NodeJSFE.git
+RUN git clone https://github.com/Cub-Scout-Pack-97/Pack97NodeJSFE.git
 
 ## Create Working Dir
 WORKDIR /Pack97NodeJSFE

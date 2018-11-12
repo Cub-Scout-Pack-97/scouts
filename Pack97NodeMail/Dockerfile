@@ -10,7 +10,7 @@ RUN apk upgrade --update
 RUN apk add git
 
 ## Move to dev folder
-RUN git clone https://github.com/johnkelley4477/pack97Mail.git
+RUN git clone https://github.com/Cub-Scout-Pack-97/pack97Mail.git
 
 ## Create Working Dir
 WORKDIR /Pack97Mail
